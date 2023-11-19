@@ -1,0 +1,25 @@
+<div class="table-container">
+  <table class="table">
+    <thead class="table-header">
+      <tr class="row">
+        <th class="first-child">Logo</th>
+        <th>Nombre del producto</th>
+        <th>Descripción</th>
+        <th>Fecha de liberación</th>
+        <th>Fecha de reestructuración</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products" class="row">
+        <td class="image-container">
+          <img [src]="product.logo" [alt]="product.name" class="image" />
+        </td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.date_release | date : 'dd/MM/yyyy' }}</td>
+        <td>{{ product.date_revision | date : 'dd/MM/yyyy' }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="results" id="results">{{productsAmount}} Resultados</span>
+</div>
