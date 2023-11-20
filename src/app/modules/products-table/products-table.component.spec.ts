@@ -1,3 +1,4 @@
+import { ModalComponent } from './../../components/modal/modal.component';
 import { FilterProductsPipe } from 'src/app/pipes/filter/filter-products.pipe';
 import {FormsModule} from '@angular/forms';
 import {dummyProducts} from 'src/test/mocks/products';
@@ -14,7 +15,7 @@ describe('ProductsTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ProductsTableComponent, FilterProductsPipe],
+      declarations: [ProductsTableComponent, FilterProductsPipe, ModalComponent],
       providers: [
         {
           provide: ProductsService,

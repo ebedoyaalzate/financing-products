@@ -1,0 +1,9 @@
+<div class="overlay" [ngClass]="{open: open}">
+  <div class="popup">
+    <span class="popup-title">¿{{ text }} {{ name }}?</span>
+    <div class="btn-container">
+      <button class="btn btn-secondary" (click)="close()">Cancelar</button>
+      <button class="btn" (click)="confirm()">Confirmar</button>
+    </div>
+  </div>
+</div>
