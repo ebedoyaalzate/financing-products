@@ -11,7 +11,7 @@ export const dummyProducts: Product[] = [
   },
   {
     id: '091',
-    name: 'asn',
+    name: 'sadasd',
     description: 'nkl',
     logo: 'https://financer.com/app/uploads/sites/9/2023/08/viisa-vs-mastercard.jpg',
     date_release: '2023-11-17T00:00:00.000+00:00',
@@ -19,7 +19,7 @@ export const dummyProducts: Product[] = [
   },
   {
     id: '092',
-    name: 'asn',
+    name: 'asf',
     description: 'nkl',
     logo: 'https://financer.com/app/uploads/sites/9/2023/08/viisa-vs-mastercard.jpg',
     date_release: '2023-11-17T00:00:00.000+00:00',
@@ -36,6 +36,22 @@ export const dummyProducts: Product[] = [
   {
     id: '094',
     name: 'asn',
+    description: 'nkl',
+    logo: 'https://financer.com/app/uploads/sites/9/2023/08/viisa-vs-mastercard.jpg',
+    date_release: '2023-11-17T00:00:00.000+00:00',
+    date_revision: '2023-11-17T00:00:00.000+00:00',
+  },
+  {
+    id: '094',
+    name: 'assdsadn',
+    description: 'nkl',
+    logo: 'https://financer.com/app/uploads/sites/9/2023/08/viisa-vs-mastercard.jpg',
+    date_release: '2023-11-17T00:00:00.000+00:00',
+    date_revision: '2023-11-17T00:00:00.000+00:00',
+  },
+  {
+    id: '094',
+    name: 'as',
     description: 'nkl',
     logo: 'https://financer.com/app/uploads/sites/9/2023/08/viisa-vs-mastercard.jpg',
     date_release: '2023-11-17T00:00:00.000+00:00',
