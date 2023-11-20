@@ -60,3 +60,11 @@
     </div>
   </div>
 </div>
+<app-modal
+  text="Estas seguro que deseas eliminar el producto "
+  [name]="deleteProduct?.name || ''"
+  [open]="openModal"
+  (closeAction)="closeModal($event)"
+  (confirmAction)="confirmDelete($event)"
+>
+</app-modal>

@@ -1,4 +1,3 @@
-import { ProductFormComponent } from './components/product-form/product-form.component';
 import {ProductsInterceptor} from './interceptors/products.interceptor';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {NgModule} from '@angular/core';

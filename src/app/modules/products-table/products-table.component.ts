@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import {Router} from '@angular/router';
 import {Component, OnInit} from '@angular/core';
 
 import {Product} from './../../types/products';
@@ -13,6 +13,8 @@ export class ProductsTableComponent implements OnInit {
   products: Product[] = [];
   pagination: number = 5;
   searchValue: string = '';
+  openModal: boolean = false;
+  deleteProduct: Product | null = null;
 
   constructor(
     private productsService: ProductsService,
@@ -34,6 +36,19 @@ export class ProductsTableComponent implements OnInit {
   }
 
   delete(product: Product) {
-    console.log(product)
+    this.openModal = true;
+    this.deleteProduct = product;
+  }
+
+  closeModal(e: any) {
+    this.openModal = false;
+  }
+
+  confirmDelete($event: boolean) {
+    this.productsService
+      .deleteProduct(this.deleteProduct?.id || '')
+      .subscribe(res => {
+        this.closeModal(true)
+      });
   }
 }
