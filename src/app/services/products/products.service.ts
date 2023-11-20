@@ -22,6 +22,11 @@ export class ProductsService {
     return this.http.post(url, product);
   }
 
+  updatedProduct(product: Product): Observable<any> {
+    const url = `${this.API_URL}/bp/products`;
+    return this.http.put(url, product);
+  }
+
   validateId(id: string): Observable<boolean> {
     const url = `${this.API_URL}/bp/products/verification`;
     return this.http.get<boolean>(url, {params: {id}});

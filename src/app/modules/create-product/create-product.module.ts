@@ -1,4 +1,4 @@
-import { ProductFormComponent } from './../../components/product-form/product-form.component';
+import { SharedModule } from './../shared-modules/shared.module';
 import {Routes, RouterModule} from '@angular/router';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
@@ -8,7 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 const routes: Routes = [{path: '', component: CreateProductComponent}];
 
 @NgModule({
-  declarations: [CreateProductComponent, ProductFormComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), ReactiveFormsModule],
+  declarations: [CreateProductComponent],
+  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
 })
 export class CreateProductModule {}

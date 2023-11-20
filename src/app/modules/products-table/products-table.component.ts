@@ -28,4 +28,12 @@ export class ProductsTableComponent implements OnInit {
   addProduct() {
     this.router.navigate(['add-product']);
   }
+
+  edit(product: Product) {
+    this.router.navigate(['edit-product'], {state: product});
+  }
+
+  delete(product: Product) {
+    console.log(product)
+  }
 }

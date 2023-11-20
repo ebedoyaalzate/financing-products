@@ -1,3 +1,4 @@
+import {ProductsService} from './../../services/products/products.service';
 import {Product} from './../../types/products';
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
@@ -8,9 +9,21 @@ import {Router} from '@angular/router';
   styleUrls: ['./create-product.component.scss'],
 })
 export class CreateProductComponent {
-  constructor(private router: Router) {}
+  existId: boolean = false;
+  constructor(
+    private router: Router,
+    private productsService: ProductsService,
+  ) {}
 
   addProduct(product: Product) {
-    this.router.navigate(['']);
+    this.productsService.validateId(product.id).subscribe(exists => {
+      if (exists) {
+        this.existId = true;
+      } else {
+        this.productsService.addProduct(product).subscribe(res => {
+          this.router.navigate(['']);
+        });
+      }
+    });
   }
 }
