@@ -9,13 +9,25 @@
     justify-content: center;
     padding: 30px;
   }
-  .search-input {
-    margin-bottom: 25px;
-    height: 40px;
-    width: 230px;
-    border-radius: 10px;
-    padding: 0 10px;
-    border: 1px solid #d1d2d5;;
+
+  .top-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .search-input {
+      margin-bottom: 25px;
+      height: 40px;
+      width: 230px;
+      border-radius: 10px;
+      padding: 0 10px;
+      border: 1px solid #d1d2d5;
+    }
+    .add-btn {
+      border-radius: 10px;
+      background-color: #97cf5f;
+      border: 1px solid #d1d2d5;
+      height: 45px;
+    }
   }
 }
 

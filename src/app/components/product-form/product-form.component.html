@@ -1,0 +1,92 @@
+<div class="container">
+  <h1 class="title">Formulario de registro</h1>
+  <form class="form" [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <div class="input-container">
+      <label for="id" class="label">ID</label>
+      <input
+        id="id"
+        type="text"
+        class="input"
+        formControlName="id"
+        [ngClass]="{'form-input-error': checkInput('id')}"
+      />
+      <span class="message-error" *ngIf="checkInput('id')">
+        {{ getMessageError('id', 'ID') }}
+      </span>
+    </div>
+    <div class="input-container">
+      <label for="name" class="label">Nombre</label>
+      <input
+        id="name"
+        type="text"
+        class="input"
+        formControlName="name"
+        [ngClass]="{'form-input-error': checkInput('name')}"
+      />
+      <span class="message-error" *ngIf="checkInput('name')">
+        {{ getMessageError('name', 'Nombre') }}
+      </span>
+    </div>
+    <div class="input-container">
+      <label for="description" class="label">Descrición</label>
+      <input
+        id="description"
+        type="text"
+        class="input"
+        formControlName="description"
+        [ngClass]="{'form-input-error': checkInput('description')}"
+      />
+      <span class="message-error" *ngIf="checkInput('description')">
+        {{ getMessageError('description', 'Descripción') }}
+      </span>
+    </div>
+    <div class="input-container">
+      <label for="logo" class="label">Logo</label>
+      <input
+        id="logo"
+        type="text"
+        class="input"
+        formControlName="logo"
+        [ngClass]="{'form-input-error': checkInput('logo')}"
+      />
+      <span class="message-error" *ngIf="checkInput('logo')">
+        {{ getMessageError('logo', 'Logo') }}
+      </span>
+    </div>
+    <div class="input-container">
+      <label for="release-date" class="label">Fecha de liberación</label>
+      <input
+        id="release-date"
+        type="text"
+        class="input"
+        formControlName="date_release"
+        [ngClass]="{'form-input-error': checkInput('date_release')}"
+        type="date"
+      />
+      <span class="message-error" *ngIf="checkInput('date_release')">
+        {{ getMessageError('date_release', 'Fecha de libreación') }}
+      </span>
+    </div>
+    <div class="input-container">
+      <label for="revision-date" class="label">Fecha de revisión</label>
+      <input
+        id="drevision-date"
+        type="text"
+        class="input"
+        formControlName="date_revision"
+        [ngClass]="{'form-input-error': checkInput('date_revision')}"
+        type="date"
+        />
+        <span class="message-error" *ngIf="checkInput('date_revision')">
+          {{ getMessageError('date_revision', 'Fecha de revisión') }}
+      </span>
+    </div>
+
+    <div class="btn-container">
+      <button class="btn btn-secondary">Reiniciar</button>
+      <button type="submit" class="btn" [disabled]="form.invalid">
+        Enviar
+      </button>
+    </div>
+  </form>
+</div>

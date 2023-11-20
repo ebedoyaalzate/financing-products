@@ -1,9 +1,12 @@
 <div class="container">
-  <input
-    class="search-input"
-    placeholder="Search..."
-    [(ngModel)]="searchValue"
-  />
+  <div class="top-container">
+    <input
+      class="search-input"
+      placeholder="Search..."
+      [(ngModel)]="searchValue"
+    />
+    <button class="add-btn" (click)="addProduct()">Agregar Producto</button>
+  </div>
   <div class="table-container">
     <table class="table">
       <thead class="table-header">
@@ -18,8 +21,7 @@
       <tbody>
         <tr
           *ngFor="
-            let product of (products
-              | filterProducts :searchValue:pagination)
+            let product of products | filterProducts : searchValue : pagination
           "
           class="row"
         >

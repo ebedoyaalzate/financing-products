@@ -16,4 +16,14 @@ export class ProductsService {
     const url = `${this.API_URL}/bp/products`;
     return this.http.get<Product[]>(url);
   }
+
+  addProduct(product: Product): Observable<any> {
+    const url = `${this.API_URL}/bp/products`;
+    return this.http.post(url, product);
+  }
+
+  validateId(id: string): Observable<boolean> {
+    const url = `${this.API_URL}/bp/products/verification`;
+    return this.http.get<boolean>(url, {params: {id}});
+  }
 }
