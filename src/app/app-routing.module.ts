@@ -1,3 +1,4 @@
+import { CreateProductModule } from './modules/create-product/create-product.module';
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
@@ -9,6 +10,14 @@ const routes: Routes = [
         m => m.ProductsTableModule,
       ),
   },
+  {
+    path: 'add-product',
+    loadChildren: () =>
+      import('./modules/create-product/create-product.module').then(
+        m => m.CreateProductModule,
+      ),
+  },
+  { path: '**',  redirectTo: '' },
 ];
 
 @NgModule({
