@@ -1,16 +1,19 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { ProductsTableComponent } from './products-table.component';
+import { FilterProductsPipe } from 'src/app/pipes/filter/filter-products.pipe';
 
 
 const routes: Routes = [{ path: '', component: ProductsTableComponent }];
 
 @NgModule({
-  declarations: [ProductsTableComponent],
+  declarations: [ProductsTableComponent, FilterProductsPipe],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    FormsModule
   ]
 })
 export class ProductsTableModule { }

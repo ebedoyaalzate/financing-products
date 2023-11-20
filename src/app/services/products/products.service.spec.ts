@@ -25,7 +25,7 @@ describe('ProductsService', () => {
 
   it('getUsers Should make a request', () => {
     service.getProducts().subscribe(products => {
-      expect(products.length).toBe(5);
+      expect(products.length).toBe(7);
       expect(products).toEqual(dummyProducts);
     });
     const request = httpMock.expectOne(`${service.API_URL}/bp/products`);
