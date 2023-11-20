@@ -32,6 +32,17 @@
           <td>{{ product.description }}</td>
           <td>{{ product.date_release | date : 'dd/MM/yyyy' }}</td>
           <td>{{ product.date_revision | date : 'dd/MM/yyyy' }}</td>
+          <div class="dropdown">
+            <button class="dropbtn"></button>
+            <div class="dropdown-content">
+              <a href="#" (click)="edit(product); $event.preventDefault()"
+                >Editar</a
+              >
+              <a href="#" (click)="delete(product); $event.preventDefault()"
+                >Eliminar</a
+              >
+            </div>
+          </div>
         </tr>
       </tbody>
     </table>

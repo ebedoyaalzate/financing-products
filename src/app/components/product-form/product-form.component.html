@@ -76,14 +76,19 @@
         formControlName="date_revision"
         [ngClass]="{'form-input-error': checkInput('date_revision')}"
         type="date"
-        />
-        <span class="message-error" *ngIf="checkInput('date_revision')">
-          {{ getMessageError('date_revision', 'Fecha de revisión') }}
+      />
+      <span class="message-error" *ngIf="checkInput('date_revision')">
+        {{ getMessageError('date_revision', 'Fecha de revisión') }}
       </span>
     </div>
 
     <div class="btn-container">
-      <button class="btn btn-secondary">Reiniciar</button>
+      <button
+        class="btn btn-secondary"
+        (click)="resetForm(); $event.preventDefault()"
+      >
+        Reiniciar
+      </button>
       <button type="submit" class="btn" [disabled]="form.invalid">
         Enviar
       </button>

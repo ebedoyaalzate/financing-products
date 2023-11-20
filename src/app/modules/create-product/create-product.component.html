@@ -1,1 +1,4 @@
-<app-product-form (submitProduct)="addProduct($event)"></app-product-form>
+<app-product-form
+  (submitProduct)="addProduct($event)"
+  [existId]="existId"
+></app-product-form>
